@@ -7,7 +7,7 @@ WIP: currently only shows a splash screen and the player's balance.
 ## Build
 
 ```sh
-git clone https://github.com/lispovckiyalt/lyd
+git clone https://github.com/lispovckiyalt/lyd.git
 cmake -B build
 cmake --build build
 ./build/lyd
