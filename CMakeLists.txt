@@ -1,0 +1,20 @@
+cmake_minimum_required(VERSION 3.10)
+project(lyd C)
+
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall -Wextra -O3 -fomit-frame-pointer")
+
+include_directories(inc)
+find_package(Threads REQUIRED)
+
+set(SOURCES
+    src/main.c
+    src/spl.c
+    src/rend_b.c
+    src/lib.c
+)
+
+add_executable(lyd ${SOURCES})
+
+target_link_libraries(lyd PRIVATE Threads::Threads)
+install(TARGETS lyd RUNTIME DESTINATION bin)
+
