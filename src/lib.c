@@ -29,3 +29,9 @@ void beep()
     }
     usleep(150000);
 }
+
+void
+sclear()
+{
+    printf("\033[2J\033[H");
+}

@@ -8,5 +8,7 @@ void controller(int i)
             printf("1");
             break;
         }
+        default:
+            return;
     }
 }

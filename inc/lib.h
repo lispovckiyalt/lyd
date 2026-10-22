@@ -2,3 +2,4 @@
 
 void
 beep();
+void sclear();
