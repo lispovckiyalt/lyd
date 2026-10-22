@@ -5,11 +5,14 @@ CMakeSpecification.log
 Makefile
 cmake_install.cmake
 install_manifest.txt
+compile*
+.clangd
 *.o
 *.obj
 /lyd
 .vscode/
 .idea/
+.cache
 *.swp
 *~
 .DS_Store

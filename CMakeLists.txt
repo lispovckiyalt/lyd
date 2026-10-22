@@ -11,6 +11,9 @@ set(SOURCES
     src/spl.c
     src/rend_b.c
     src/lib.c
+    src/rend_m.c
+    src/ginput.c
+    src/controller.c
 )
 
 add_executable(lyd ${SOURCES})
