@@ -1,6 +1,8 @@
 #include "io.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include "lib.h"
+
 void
 ginput(int* i) {
     char buf[10];
@@ -10,4 +12,5 @@ ginput(int* i) {
     long input  = strtol(buf,&end,10);
 
     *i = input;
+    beep();
 }
