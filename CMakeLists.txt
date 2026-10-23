@@ -14,6 +14,7 @@ set(SOURCES
     src/rend_m.c
     src/ginput.c
     src/controller.c
+    src/roulette.c
 )
 
 add_executable(lyd ${SOURCES})
