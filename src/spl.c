@@ -1,4 +1,5 @@
-#include <stdio.h>
+#include <string.h>
+#include <unistd.h>
 #include "rend.h"
 
 
@@ -19,7 +20,7 @@ spl()
         "·▀▄┼┼┼┼┼┼┼┼┼┼┼┼┼▓ ░┼┼┼┼┼┼┼┼┼┼┼┼┼┼▄▀  █┼┼┼┼┼┼┼┼┼┼┼┼┼┼▄▀ \n"
         "   ▀▀▀▀▀▀▀▀▀▀▀▀▀▀ ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀    ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀  \n";
 
-    puts(sprite);
+    write(1, sprite, strlen(sprite));
 }
 
 
