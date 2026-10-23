@@ -34,4 +34,5 @@ void
 sclear()
 {
     printf("\033[2J\033[H");
+    fflush(stdout);
 }
