@@ -1,7 +1,14 @@
 #pragma once
+#include <stdbool.h>
+
+struct plr {
+    int m;
+    int i;
+    bool isrun;
+};
 
 void
-controller(int i);
+controller(struct plr* sp);
 
 void 
 ginput(int* i);
