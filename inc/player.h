@@ -4,6 +4,6 @@
 struct plr {
     int m;
     int i;
-    long bid;
+    int bid;
     bool isrun;
 };

@@ -1,12 +1,10 @@
 #include "io.h"
 #include <stdio.h>
-
+#include <unistd.h>
 void
-makebid(long b)
+makebid(int* b)
 {
-    int i = (int)b; 
-    int *p = &i;
     printf("bid: ");
 
-    ginput(p);
+    ginput(b);
 }
