@@ -4,7 +4,7 @@
 #include <stdlib.h>
 
 void 
-roulette(struct plr** sp)
+roulette(struct plr* sp)
 {
-    makebid(&(*sp));
+    makebid(sp);
 }

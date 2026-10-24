@@ -3,4 +3,4 @@
 #include "player.h"
 
 void 
-roulette(struct plr** sp);
+roulette(struct plr* sp);
