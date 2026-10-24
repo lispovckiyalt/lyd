@@ -1,14 +1,12 @@
 #pragma once
 #include <stdbool.h>
-
-struct plr {
-    int m;
-    int i;
-    bool isrun;
-};
+#include "player.h"
 
 void
 controller(struct plr* sp);
+
+void
+makebid(long b);
 
 void 
 ginput(int* i);
