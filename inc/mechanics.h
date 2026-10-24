@@ -1,2 +1,6 @@
+#pragma once
+#include <stdbool.h>
+#include "player.h"
+
 void 
-roulette(int m);
+roulette(struct plr** sp);
