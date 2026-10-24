@@ -11,7 +11,7 @@ int
 main(void)
 {   
     srand((unsigned int)time(NULL));
-    struct plr p = {100, 0, 0, true};
+    struct plr p = { .m = 100, .i = 0, .bid = 0, .isrun = true};
     while(p.isrun) {
         sclear();
         spl();
