@@ -11,7 +11,7 @@ makebid(struct plr* sp)
 
     if(sp->bid > sp->m || sp->bid <= 0)
     {
-        printf("the bet cannot be higher/lower than the balance\n");
+        printf("You can't place a bet like that.\n");
         fflush(stdout);
         sp->bid = 0;
         sleep(1);
