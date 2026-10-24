@@ -10,7 +10,7 @@
 int
 main(void)
 {   
-    srand(time(NULL));
+    srand((unsigned int)time(NULL));
     struct plr p = {100, 0, 0, true};
     while(p.isrun) {
         sclear();
