@@ -6,7 +6,7 @@ void
 controller(struct plr* sp);
 
 void
-makebid(int* b);
+makebid(struct plr** sp);
 
 void 
 ginput(int* i);
