@@ -8,7 +8,7 @@ void controller(struct plr* sp)
 
     switch (sp->i) {
         case 1: {
-            roulette(sp->m);
+            roulette(&sp);
             break;
         }
 	    case 2: {
