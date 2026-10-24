@@ -33,6 +33,5 @@ void beep()
 void
 sclear()
 {
-    printf("\033[2J\033[H");
-    fflush(stdout);
+    write(1, "\033[2J\033[H", 7);
 }
