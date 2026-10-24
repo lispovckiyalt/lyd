@@ -6,5 +6,5 @@
 void 
 roulette(struct plr** sp)
 {
-    makebid(&(*sp)->bid);
+    makebid(&(*sp));
 }
