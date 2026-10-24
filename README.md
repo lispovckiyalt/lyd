@@ -14,6 +14,7 @@ Terminal casino game written in C. Play with virtual money.
 ## Build
 
 ```sh
+(!INSTALL SOX!!!!!!!)
 git clone https://github.com/lispovckiyalt/lyd.git
 cd lyd
 cmake -B build
