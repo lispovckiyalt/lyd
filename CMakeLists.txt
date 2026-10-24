@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.10)
 project(lyd C)
 
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall -Wextra -O3 -fomit-frame-pointer")
-
+add_compile_options(-Wall -Wextra -Wpedantic)
 include_directories(inc)
 find_package(Threads REQUIRED)
 
@@ -15,6 +15,7 @@ set(SOURCES
     src/ginput.c
     src/controller.c
     src/roulette.c
+    src/makebid.c
 )
 
 add_executable(lyd ${SOURCES})
