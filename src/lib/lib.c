@@ -40,8 +40,9 @@ sclear()
 int
 lrand(int min, int max)
 {
-    int rb; 
+    unsigned int rb; 
     if( getrandom(&rb, sizeof(rb), 0) == -1) { return min; }
-    int r = (unsigned int)(min - max + 1);
-    return (int)((rb % r) + (unsigned int)min);
+    unsigned int r = (unsigned int)(max - min + 1);
+    unsigned int result = (rb % r) + (unsigned int)min;
+    return (int)result;
 }
