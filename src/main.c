@@ -5,6 +5,7 @@
 #include "rend.h"
 #include "io.h"
 #include "lib.h"
+#include "mechanics.h"
 
 
 int
@@ -16,6 +17,7 @@ main(void)
         sclear();
         spl();
         rend_balance(p.m);
+        if (iswin(&p)) { continue; }
         rend_m(p.i);
         ginput(&p.i);
         controller(&p);
