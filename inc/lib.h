@@ -2,4 +2,8 @@
 
 void
 beep();
+
+int
+lrand(int min, int max);
+
 void sclear();
