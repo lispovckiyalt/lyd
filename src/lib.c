@@ -5,6 +5,7 @@
 #include <unistd.h>
 #include <sys/types.h>
 #include <sys/wait.h>
+#include <sys/random.h>
 
 void* play_beep_th(void* arg)
         {
@@ -34,4 +35,13 @@ void
 sclear()
 {
     write(1, "\033[2J\033[H", 7);
+}
+
+int
+lrand(int min, int max)
+{
+    int rb; 
+    if( getrandom(&rb, sizeof(rb), 0) == -1) { return min; }
+    int r = (unsigned int)(min - max + 1);
+    return (int)((rb % r) + (unsigned int)min);
 }
