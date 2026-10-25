@@ -8,15 +8,15 @@ find_package(Threads REQUIRED)
 
 set(SOURCES
     src/main.c
-    src/spl.c
-    src/rend_b.c
-    src/lib.c
-    src/rend_m.c
-    src/ginput.c
-    src/controller.c
-    src/roulette.c
-    src/makebid.c
-    src/iswin.c
+    src/rend/spl.c
+    src/rend/rend_b.c
+    src/lib/lib.c
+    src/rend/rend_m.c
+    src/io/ginput.c
+    src/io/controller.c
+    src/mechanics/roulette.c
+    src/io/makebid.c
+    src/mechanics/iswin.c
 )
 
 add_executable(lyd ${SOURCES})
