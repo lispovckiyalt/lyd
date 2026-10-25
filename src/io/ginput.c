@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <stdbool.h>
 #include <stdlib.h>
+#include <stdio_ext.h>
 #include <limits.h>
 #include "lib.h"
 
@@ -23,7 +24,7 @@ void
 ginput(int* i) {
     char buf[10];
     fgets(buf, 10, stdin);
-
+    __fpurge(stdin); 
     if (!sc(buf, i)) { printf("str parsing error"); }
 
     beep();
