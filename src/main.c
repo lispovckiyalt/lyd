@@ -9,7 +9,7 @@
 int
 main(void)
 {
-    struct plr p = { .m = 100, .i = 0, .bid = 0, .isrun = true};
+    struct plr p = { .m = 100, .i = 0, .bid = 0, .isrun = true, .color = 0};
     while(p.isrun) {
         sclear();
         spl();
