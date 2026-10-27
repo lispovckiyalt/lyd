@@ -17,6 +17,7 @@ set(SOURCES
     src/mechanics/roulette.c
     src/io/makebid.c
     src/mechanics/iswin.c
+    src/io/ccts.c
 )
 
 add_executable(lyd ${SOURCES})
