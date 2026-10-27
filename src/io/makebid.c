@@ -2,7 +2,9 @@
 #include "io.h"
 #include <stdio.h>
 #include <unistd.h>
-void
+#include <stdbool.h>
+
+bool
 makebid(struct plr* sp)
 {
     printf("bid: ");
@@ -15,8 +17,10 @@ makebid(struct plr* sp)
         fflush(stdout);
         sp->bid = 0;
         sleep(1);
-        return;
+        return false;
     }
 
     sp->m -= sp->bid;
+
+    return true;
 }

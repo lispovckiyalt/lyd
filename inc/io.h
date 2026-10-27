@@ -5,7 +5,7 @@
 void
 controller(struct plr* sp);
 
-void
+bool
 makebid(struct plr* sp);
 
 void 
