@@ -10,3 +10,6 @@ makebid(struct plr* sp);
 
 void 
 ginput(int* i);
+
+char*
+ccts(struct plr* sp);
