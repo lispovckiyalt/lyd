@@ -1,3 +1,10 @@
+/*
+ * Copyright (c) 2026 lispovckiyalt
+ *
+ * This software is released under the MIT License.
+ * See the LICENSE file in the project root for full license information.
+ */
+
 #include "lib.h"
 #include <stdio.h>
 #include <stdlib.h>
