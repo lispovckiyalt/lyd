@@ -1,3 +1,4 @@
+#include "tcolor.h"
 #include "rend.h"
 #include <stdio.h>
 
@@ -11,6 +12,6 @@ rend_m(int i)
 
     for(size_t e = 0; e < arrsize; e++)
     {
-        printf("%s", obj[e]);
+        printf("%s%s%s", COLOR_CYAN, obj[e], RESET_COLOR);
     }
 }
