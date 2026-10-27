@@ -1,8 +1,6 @@
 cmake_minimum_required(VERSION 3.10)
 project(lyd C)
 
-set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall -Wextra -Wpedantic -Wshadow -Wconversion -fsanitize=address,undefined")
-add_compile_options(-Wall -Wextra -Wpedantic)
 include_directories(inc)
 find_package(Threads REQUIRED)
 
@@ -22,6 +20,16 @@ set(SOURCES
 
 add_executable(lyd ${SOURCES})
 
-target_link_libraries(lyd PRIVATE Threads::Threads)
+target_compile_options(lyd PRIVATE 
+    -Wall -Wextra -Wpedantic -Wshadow -Wconversion 
+    -fsanitize=address,undefined
+)
+
+target_link_libraries(lyd PRIVATE 
+    Threads::Threads
+    -fsanitize=address,undefined
+)
+
+
 install(TARGETS lyd RUNTIME DESTINATION bin)
 
