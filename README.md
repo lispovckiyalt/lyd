@@ -17,8 +17,7 @@
 
 ```
 
-![C](https://img.shields.io/badge/Language-C-A8B9CC?style=flat&logo=c&logoColor=white) ![C23](https://img.shields.io/badge/Standard-C23-blue?style=flat) ![Linux](https://img.shields.io/badge/OS-Linux-FCC624?style=flat&logo=linux&logoColor=black) ![GCC](https://img.shields.io/badge/Compiler-GCC-2C6DB2?style=flat&logo=gnu&logoColor=white)
-
+![C](https://img.shields.io/badge/Language-C-6E7681?style=for-the-badge&logo=c&logoColor=white&labelColor=6E7681) ![C99](https://img.shields.io/badge/Standard-C99-6E7681?style=for-the-badge&logo=c&logoColor=white&labelColor=6E7681) ![Linux](https://img.shields.io/badge/OS-Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black) ![GCC](https://img.shields.io/badge/Compiler-GCC-A42E2B?style=for-the-badge&logo=gnu&logoColor=white)
 
 
 Terminal casino game written in C. Play with virtual money.
