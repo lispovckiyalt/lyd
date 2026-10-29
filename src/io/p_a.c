@@ -12,7 +12,7 @@
 #include "tcolor.h"
 
 void
-p(char* obj[6], size_t s, char* c)
+p(char** obj, size_t s, char* c)
 {
     for(size_t j = 0; j < s; j++)
     {
@@ -40,13 +40,15 @@ print_array(char* color, char* first, ...)
         if (co >= capacity)
         {
             capacity *= 2;
-            obj = realloc(obj, capacity * sizeof(char*));
+            char** t = realloc(obj, capacity * sizeof(char*));
+            if (t == 0x0) {free(obj); va_end(args); return;}
+            obj = t; 
         }
-
         obj[co] = c;
         co++;
         c = va_arg(args, char*);
     }
     va_end(args);
     p(obj, co, color);
+    free(obj);
 }
