@@ -8,6 +8,8 @@
 #include <stdio.h>
 #include <stdarg.h>
 #include <stdlib.h>
+#include <unistd.h>
+#include <string.h>
 
 #include "tcolor.h"
 
@@ -16,10 +18,10 @@ p(char** obj, size_t s, char* c)
 {
     for(size_t j = 0; j < s; j++)
     {
-        printf("%s%s%s", c, obj[j], RESET_COLOR );
+        write(STDOUT_FILENO, c, strlen(c));
+        write(STDOUT_FILENO, obj[j], strlen(obj[j]));
+        write(STDOUT_FILENO, RESET_COLOR, strlen(RESET_COLOR));
     }
-
-    fflush(stdout);
 }
 
 void
