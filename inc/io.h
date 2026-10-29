@@ -15,7 +15,7 @@ controller(struct plr* sp);
 bool
 makebid(struct plr* sp);
 
-void 
+bool 
 ginput(int* i);
 
 int

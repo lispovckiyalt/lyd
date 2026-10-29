@@ -16,7 +16,7 @@ makebid(struct plr* sp)
 {
     printf("bid: ");
 
-    ginput(&sp->bid);
+    if(!ginput(&sp->bid)) { return false; }
 
     if(sp->bid > sp->m || sp->bid <= 0)
     {

@@ -13,6 +13,7 @@
 #include <stdio_ext.h>
 #include <limits.h>
 #include "lib.h"
+#include "tcolor.h"
 
 bool sc(const char* str, int* in)
 {
@@ -28,12 +29,13 @@ bool sc(const char* str, int* in)
     return true;
 }
 
-void
+bool
 ginput(int* i) {
     char buf[10];
     fgets(buf, 10, stdin);
     __fpurge(stdin); 
-    if (!sc(buf, i)) { printf("str parsing error"); }
+    if (!sc(buf, i)) { printf("%s String Parsing Error %s\n", COLOR_RED, RESET_COLOR); return false; }
 
     beep();
+    return true;
 }
