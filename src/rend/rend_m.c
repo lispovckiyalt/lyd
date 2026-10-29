@@ -14,11 +14,11 @@ rend_m(int i)
 {
     (void)i;
 
-    const char* obj[] = {"1. roulette\n ", "2. exit\n"};
+    const char* obj[] = {"1. Roulette\n ", "2. Exit\n"};
     size_t arrsize = sizeof(obj) / sizeof(obj[0]);
 
     for(size_t e = 0; e < arrsize; e++)
     {
-        printf("%s%s%s", COLOR_CYAN, obj[e], RESET_COLOR);
+        printf("%s%s%s", COLOR_WHITE, obj[e], RESET_COLOR);
     }
 }
