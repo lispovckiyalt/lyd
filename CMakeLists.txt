@@ -18,6 +18,7 @@ set(SOURCES
     src/mechanics/iswin.c
     src/io/ccts.c
     src/io/gc.c
+    src/io/p_a.c
 )
 
 add_executable(lyd ${SOURCES})
