@@ -32,5 +32,5 @@ roulette(struct plr* sp)
         sp->m += sp->bid;
         printf("u lucky!\n");
         sleep(1);
-    } else { printf("You're out of luck—try a different color."); sleep(1); }
+    } else { printf("You're out of luck—try a different color.\n"); sleep(1); }
 }
