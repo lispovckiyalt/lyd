@@ -21,5 +21,8 @@ ginput(int* i);
 int
 gc(int rp, struct plr* sp);
 
+void
+print_array(char* color, char* first, ...);
+
 char*
 ccts(struct plr* sp);

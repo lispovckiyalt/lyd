@@ -5,17 +5,20 @@
  * See the LICENSE file in the project root for full license information.
  */
 
+#include <stdio.h>
+#include <unistd.h>
+#include <stddef.h>
+
 #include "io.h"
 #include "mechanics.h"
 #include "lib.h"
-#include <stdio.h>
-#include <unistd.h>
 #include "tcolor.h"
+
 void 
 roulette(struct plr* sp)
 {
     if (!makebid(sp)) { return; }
-    printf("%s Color?\n 0: Black,\n 1: White,\n 2: Green%s\n ", COLOR_RED, RESET_COLOR);
+    print_array(COLOR_RED, "Color?\n 0: Black,\n 1: White,\n 2: Green", NULL);
     ginput(&sp->color);
     sp->color = (sp->color >= 0 && sp->color <= 2) ? sp->color : 0;
 
