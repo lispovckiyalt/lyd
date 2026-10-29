@@ -29,7 +29,7 @@ Terminal casino game written in C. Play with virtual money.
 
 - [x] Splash screen and balance display
 - [x] Placing a bet (validated against the balance)
-- [ ] Roulette spin and payouts
+- [x] Roulette spin and payouts
 - [ ] More games
 
 ## Build
