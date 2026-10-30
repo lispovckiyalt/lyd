@@ -29,7 +29,7 @@ main(void)
             continue;
         }
 
-        rend_m(p.i);
+        rend_m();
         ginput(&p.i);
         controller(&p);
     }

@@ -5,20 +5,12 @@
  * See the LICENSE file in the project root for full license information.
  */
 
-#include "tcolor.h"
+#include "io.h"
 #include "rend.h"
-#include <stdio.h>
+#include "tcolor.h"
 
 void
-rend_m(int i)
+rend_m()
 {
-    (void)i;
-
-    const char* obj[] = {"1. Roulette\n ", "2. Exit\n"};
-    size_t arrsize = sizeof(obj) / sizeof(obj[0]);
-
-    for(size_t e = 0; e < arrsize; e++)
-    {
-        printf("%s%s%s", COLOR_WHITE, obj[e], RESET_COLOR);
-    }
+    print_array(COLOR_RED, "1: Roulette\n", "2: Exit\n", 0x0); 
 }
