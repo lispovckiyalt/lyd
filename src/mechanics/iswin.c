@@ -21,7 +21,5 @@ iswin(struct plr* sp)
 {
     if (sp->m >= WINVALUE) {sp->isrun = false; print_array(COLOR_GREEN, "You won!\n", 0x0);}
     else if(sp->m <= 0)   {sp->isrun = false; print_array(COLOR_RED, "You 're broke Try again\n", 0x0);}
-    if (!sp->isrun) { return true; }
-
-    return false;
+    return !sp->isrun;
 }
