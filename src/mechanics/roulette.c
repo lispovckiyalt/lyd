@@ -25,12 +25,13 @@ roulette(struct plr* sp)
     char* scolor = ccts(sp);
 
     int rp = lrand(0, 1000);
-    int c = gc(rp, sp);
+    int c = (gc(rp, sp) - sp->bid);
     printf("You drew... %s\n", scolor);
     fflush(stdout);
+    animate(c);
     sleep(1);
 
-    if((c -= sp->bid) == sp->color)
+    if(c == sp->color)
     {
         sp->m += sp->bid;
         printf("u lucky!\n");

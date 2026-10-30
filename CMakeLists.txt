@@ -21,6 +21,7 @@ set(SOURCES
     src/lib/beep.c
     src/lib/lrand.c
     src/lib/sclear.c
+    src/io/animate.c
 )
 
 add_executable(lyd ${SOURCES})

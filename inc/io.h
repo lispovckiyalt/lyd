@@ -26,3 +26,6 @@ print_array(char* color, char* first, ...);
 
 char*
 ccts(struct plr* sp);
+
+void
+animate(int selectedcolor);
