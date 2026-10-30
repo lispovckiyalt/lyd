@@ -5,30 +5,23 @@
  * See the LICENSE file in the project root for full license information.
  */
 
-#include "mechanics.h"
-#include "player.h"
 #include <stdbool.h>
 #include <unistd.h>
-#include <stdio.h>
+
+#include "io.h"
+#include "mechanics.h"
+#include "player.h"
+#include "tcolor.h"
+
+#define WINVALUE 1e6
+
 
 bool
 iswin(struct plr* sp)
 {
-    if (sp->m >= 1000000)
-    {
-        sp->isrun = false;
-        printf("you win!");
-    } else if(sp->m <= 0)
-    {
-        sp->isrun = false;
-        printf("lose!");
-    }
-
-    if(!sp->isrun)
-    {
-        sleep(1);
-        return true;
-    }
+    if (sp->m >= WINVALUE) {sp->isrun = false; print_array(COLOR_GREEN, "You won!\n", 0x0);}
+    else if(sp->m <= 0)   {sp->isrun = false; print_array(COLOR_RED, "You 're broke Try again\n", 0x0);}
+    if (!sp->isrun) { return true; }
 
     return false;
 }
