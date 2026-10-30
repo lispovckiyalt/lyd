@@ -9,7 +9,6 @@ set(SOURCES
     src/main.c
     src/rend/spl.c
     src/rend/rend_b.c
-    src/lib/lib.c
     src/rend/rend_m.c
     src/io/ginput.c
     src/io/controller.c
@@ -19,6 +18,9 @@ set(SOURCES
     src/io/ccts.c
     src/io/gc.c
     src/io/p_a.c
+    src/lib/beep.c
+    src/lib/lrand.c
+    src/lib/sclear.c
 )
 
 add_executable(lyd ${SOURCES})

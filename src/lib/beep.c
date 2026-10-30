@@ -5,14 +5,11 @@
  * See the LICENSE file in the project root for full license information.
  */
 
-#include "lib.h"
 #include <stdio.h>
-#include <stdlib.h>
 #include <pthread.h>
 #include <unistd.h>
 #include <sys/types.h>
 #include <sys/wait.h>
-#include <sys/random.h>
 
 void* play_beep_th(void* arg)
         {
@@ -36,20 +33,4 @@ void beep()
         perror("cannot open thread");
     }
     usleep(150000);
-}
-
-void
-sclear()
-{
-    write(1, "\033[2J\033[H", 7);
-}
-
-int
-lrand(int min, int max)
-{
-    unsigned int rb; 
-    if( getrandom(&rb, sizeof(rb), 0) == -1) { return min; }
-    unsigned int r = (unsigned int)(max - min + 1);
-    unsigned int result = (rb % r) + (unsigned int)min;
-    return (int)result;
 }

@@ -7,5 +7,5 @@
 
 #pragma once
 void spl();
-void rend_m(int i);
+void rend_m();
 void rend_balance(int m);
