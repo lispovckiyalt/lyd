@@ -31,6 +31,7 @@ print_array(char* color, char* first, ...)
     size_t capacity = 6;
 
     char** obj = malloc(capacity * sizeof(char*));
+    if (obj == NULL) { return; }
 
     va_list args;
     va_start(args, first);

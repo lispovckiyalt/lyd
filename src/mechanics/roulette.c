@@ -18,7 +18,7 @@ void
 roulette(struct plr* sp)
 {
     if (!makebid(sp)) { return; }
-    print_array(COLOR_RED, "Color?\n 0: Black,\n 1: White,\n 2: Green", NULL);
+    print_array(COLOR_RED, "Color?\n 0: Black,\n 1: White,\n 2: Green\n", NULL);
     ginput(&sp->color);
     sp->color = (sp->color >= 0 && sp->color <= 2) ? sp->color : 0;
 
