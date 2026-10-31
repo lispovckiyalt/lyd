@@ -13,19 +13,19 @@
 #include "rend.h"
 
 void
-animate(int selectedcolor)
+animate(int color)
 {
-    const char* ets[4] = {"\033[35mBlack\033[0m", "\033[37mWhite\033[0m", "\033[32mGreen\033[0m"};
+    const char * array[3] = {"\033[35mBlack\033[0m", "\033[37mWhite\033[0m", "\033[32mGreen\033[0m"};
 
-    for(size_t i = 0; i < 10; i++)
+    for(size_t index = 0; index < 10; index++)
     {
-        int randomv = lrand(0, 2);
-        printf("%s\n", ets[randomv]);
+        int random_value = lrand(0, 2);
+        printf("%s\n", array[random_value]);
         usleep(300000);
     }
-    char* t = ccts(selectedcolor);
-
     usleep(300000);
 
-    printf("%s\n", t);
+    const char * selected_color = ccts(color);
+
+    printf("%s\n", selected_color);
 }

@@ -25,7 +25,7 @@ print(char ** array, size_t capacity, char * color)
 }
 
 void
-print_array(char* color, char* first, ...)
+print_array(char * color, char * first, ...)
 {
     size_t count = 0;
     size_t capacity = 6;

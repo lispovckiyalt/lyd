@@ -14,27 +14,40 @@
 #include "lib.h"
 #include "tcolor.h"
 
+void
+get_color(struct plr * sp)
+{
+    print_array(COLOR_RED, "Color?\n 0: Black,\n 1: White,\n 2: Green\n", NULL);
+
+    ginput(&sp->color);
+
+    sp->color = (sp->color >= 0 && sp->color <= 2) ? sp->color : 0;
+}
+
 void 
-roulette(struct plr* sp)
+roulette(struct plr * sp)
 {
     if (!makebid(sp)) { return; }
-    print_array(COLOR_RED, "Color?\n 0: Black,\n 1: White,\n 2: Green\n", NULL);
-    ginput(&sp->color);
-    sp->color = (sp->color >= 0 && sp->color <= 2) ? sp->color : 0;
 
-    char* scolor = ccts(sp->color);
+    get_color(sp);
 
-    int rp = lrand(0, 1000);
-    int c = (gc(rp, sp) - sp->bid);
-    printf("You drew... %s\n", scolor);
-    fflush(stdout);
-    animate(c);
+    int random_chance = lrand(0, 1000);
+    // get_spin_result returns (color + bid). Subtract bid to get the pure color.
+    int result = (get_spin_result(random_chance, sp) - sp->bid);
+    char * selected_color = ccts(sp->color);
+
+    print_array(COLOR_WHITE, "You drew... ", selected_color, "\n", 0x0);
+
+    animate(result);
+
     sleep(1);
 
-    if(c == sp->color)
+    if(result == sp->color)
     {
         sp->m += sp->bid;
-        printf("u lucky!\n");
+        printf("%s You're in luck—you've been credited with: %d%s\n", COLOR_GREEN, sp->bid, RESET_COLOR);
+        fflush(stdout);
         sleep(1);
-    } else { printf("You're out of luck—try a different color.\n"); sleep(1); }
+    } 
+    else { printf("You're out of luck—try a different color.\n"); sleep(1); }
 }

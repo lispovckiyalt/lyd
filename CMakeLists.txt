@@ -16,8 +16,8 @@ set(SOURCES
     src/io/makebid.c
     src/mechanics/iswin.c
     src/io/ccts.c
-    src/io/gc.c
-    src/io/p_a.c
+    src/io/get_spin_result.c
+    src/io/print_array.c
     src/lib/beep.c
     src/lib/lrand.c
     src/lib/sclear.c

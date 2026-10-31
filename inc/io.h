@@ -7,6 +7,7 @@
 
 #pragma once
 #include <stdbool.h>
+
 #include "player.h"
 
 void
@@ -19,10 +20,10 @@ bool
 ginput(int* i);
 
 int
-gc(int rp, struct plr* sp);
+get_spin_result(int rp, struct plr * sp);
 
 void
-print_array(char* color, char* first, ...);
+print_array(char * color, char * first, ...);
 
 char*
 ccts(int needtocheck);
