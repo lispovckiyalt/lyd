@@ -9,9 +9,9 @@
 #include "player.h"
 
 char*
-ccts(struct plr* sp)
+ccts(int needtocheck)
 {
-    switch (sp->color)
+    switch (needtocheck)
     {
         case 0:
             return "Black";

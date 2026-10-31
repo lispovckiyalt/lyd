@@ -22,7 +22,7 @@ roulette(struct plr* sp)
     ginput(&sp->color);
     sp->color = (sp->color >= 0 && sp->color <= 2) ? sp->color : 0;
 
-    char* scolor = ccts(sp);
+    char* scolor = ccts(sp->color);
 
     int rp = lrand(0, 1000);
     int c = (gc(rp, sp) - sp->bid);

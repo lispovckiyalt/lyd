@@ -25,7 +25,7 @@ void
 print_array(char* color, char* first, ...);
 
 char*
-ccts(struct plr* sp);
+ccts(int needtocheck);
 
 void
 animate(int selectedcolor);

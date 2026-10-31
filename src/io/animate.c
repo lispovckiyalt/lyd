@@ -12,25 +12,6 @@
 #include "lib.h"
 #include "rend.h"
 
-char*
-ctext(int sc)
-{
-    switch (sc)
-    {
-        case 0:
-            return "\033[35mBlack\033[0m";
-            break;
-        case 1:
-            return "\033[37mWhite\033[0m";
-            break;
-        case 2:
-            return "\033[32mGreen\033[0m";
-            break;
-    }
-
-    return "NULL";
-}
-
 void
 animate(int selectedcolor)
 {
@@ -38,15 +19,11 @@ animate(int selectedcolor)
 
     for(size_t i = 0; i < 10; i++)
     {
-        sclear();
-        spl();
         int randomv = lrand(0, 2);
         printf("%s\n", ets[randomv]);
         usleep(300000);
     }
-    sclear();
-    spl();
-    char* t = ctext(selectedcolor);
+    char* t = ccts(selectedcolor);
 
     usleep(300000);
 
