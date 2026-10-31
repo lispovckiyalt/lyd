@@ -13,9 +13,9 @@
 int
 lrand(int min, int max)
 {
-    unsigned int rb; 
-    if( getrandom(&rb, sizeof(rb), 0) == -1) { return min; }
+    unsigned int buffer; 
+    if(getrandom(&buffer, sizeof(buffer), 0) == -1) { return min; }
     unsigned int r = (unsigned int)(max - min + 1);
-    unsigned int result = (rb % r) + (unsigned int)min;
+    unsigned int result = (buffer % r) + (unsigned int)min;
     return (int)result;
 }

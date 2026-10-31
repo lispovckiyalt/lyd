@@ -8,9 +8,10 @@
 #pragma once
 
 void
-beep();
+beep(void);
 
 int
 lrand(int min, int max);
 
-void sclear();
+void 
+sclear(void);

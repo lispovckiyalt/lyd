@@ -6,13 +6,15 @@
  */
 
 #include <stdio.h>
+#include <unistd.h>
+
 #include "lib.h"
 #include "rend.h"
-#include <unistd.h>
 #include "tcolor.h"
+
 void
-rend_balance(int m)
+rend_balance(int money)
 { 
     beep();
-    printf("%s Balance: %i%s\n", COLOR_GREEN, m, RESET_COLOR);
+    printf("%s Balance: %i%s\n", COLOR_GREEN, money, RESET_COLOR);
 }

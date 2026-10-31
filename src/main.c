@@ -29,7 +29,7 @@ main(void)
             continue;
         }
 
-        rend_m();
+        rend_menu();
         ginput(&p.i);
         controller(&p);
     }

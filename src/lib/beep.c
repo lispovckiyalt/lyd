@@ -5,32 +5,46 @@
  * See the LICENSE file in the project root for full license information.
  */
 
+#define BEEP_DELAY_US 150000
+
 #include <stdio.h>
 #include <pthread.h>
 #include <unistd.h>
 #include <sys/types.h>
 #include <sys/wait.h>
+#include <stdlib.h>
 
-void* play_beep_th(void* arg)
-        {
-    (void)arg;
+void * 
+play_beep_th()
+{
     pthread_detach(pthread_self());
     pid_t pid = fork();
-    if (pid == 0) {
+
+    if(pid == 0) 
+    {
         execl("/usr/bin/play", "play", "-q", "-n", "synth", "0.15", "sin", "750", "fade", "q", "0", "0.15", "0.1", (char *)NULL);
-        _exit(1);
-    } else if (pid > 0) {
-        waitpid(pid, NULL, 0);
+
+        _exit(EXIT_FAILURE);
     }
-    return NULL;
+
+    else if(pid > 0) 
+    {
+        waitpid(pid, 0x0, 0);
+    }
+
+    return 0x0;
 }
 
-void beep()
+void 
+beep(void)
 {
     
     pthread_t thread_id;
-    if (pthread_create(&thread_id, NULL, play_beep_th, NULL) != 0) {
-        perror("cannot open thread");
+
+    if (pthread_create(&thread_id, 0x0, play_beep_th, 0x0) != 0) 
+    {
+        perror("Unable to open the thread");
     }
-    usleep(150000);
+
+    usleep(BEEP_DELAY_US);
 }

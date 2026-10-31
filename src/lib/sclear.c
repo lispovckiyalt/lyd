@@ -10,7 +10,7 @@
 #include "lib.h"
 
 void
-sclear()
+sclear(void)
 {
     write(1, "\033[2J\033[H", 7);
 }

@@ -6,6 +6,6 @@
  */
 
 #pragma once
-void spl();
-void rend_m();
-void rend_balance(int m);
+void spl(void);
+void rend_menu(void);
+void rend_balance(int money);

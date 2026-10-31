@@ -7,13 +7,14 @@
 
 #include <string.h>
 #include <unistd.h>
+
 #include "rend.h"
 #include "tcolor.h"
 
 void
-spl()
+spl(void)
 {
-    const char* sprite =
+    const char * sprite =
         COLOR_RED"▄▄▄▄▄▄▄▄▄         ▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄ ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄   \n"
         "▄       ▓     ░   ▄      ▓  ▄      █ ▄              ▀▄\n"
         "█       ▒   ·░░░  █      ▒  ▒     ▒█ █               ▐▌\n"
