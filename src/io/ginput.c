@@ -15,9 +15,10 @@
 #include "lib.h"
 #include "tcolor.h"
 
-bool sc(const char* str, int* in)
+bool 
+sc(const char * str, int * in)
 {
-    char* e;
+    char * e;
     long v = strtol(str, &e, 10);
 
     if (e == str || v > INT_MAX || v < INT_MIN)
@@ -30,7 +31,7 @@ bool sc(const char* str, int* in)
 }
 
 bool
-ginput(int* i) {
+ginput(int * i) {
     char buf[10];
     fgets(buf, 10, stdin);
     __fpurge(stdin); 

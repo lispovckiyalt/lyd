@@ -6,12 +6,13 @@
  */
 
 #include "io.h"
-#include "player.h"
+
+/* get_cstr -- get-color-string-Value */
 
 char*
-ccts(int needtocheck)
+get_cstr(int value)
 {
-    switch (needtocheck)
+    switch (value)
     {
         case 0:
             return "Black";
@@ -24,5 +25,5 @@ ccts(int needtocheck)
             break;
     }
 
-    return "err";
+    return "Unable to read the value\n";
 }

@@ -34,7 +34,7 @@ roulette(struct plr * sp)
     int random_chance = lrand(0, 1000);
     // get_spin_result returns (color + bid). Subtract bid to get the pure color.
     int result = (get_spin_result(random_chance, sp) - sp->bid);
-    char * selected_color = ccts(sp->color);
+    char * selected_color = get_cstr(sp->color);
 
     print_array(COLOR_WHITE, "You drew... ", selected_color, "\n", 0x0);
 

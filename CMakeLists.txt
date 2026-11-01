@@ -7,21 +7,25 @@ find_package(Threads REQUIRED)
 
 set(SOURCES
     src/main.c
+    
     src/rend/spl.c
     src/rend/rend_b.c
     src/rend/rend_m.c
+
     src/io/ginput.c
     src/io/controller.c
-    src/mechanics/roulette.c
+    src/io/animate.c
     src/io/makebid.c
-    src/mechanics/iswin.c
-    src/io/ccts.c
+    src/io/get_cstr.c
     src/io/get_spin_result.c
     src/io/print_array.c
+    src/io/animate.c
+
+    src/mechanics/roulette.c
+    src/mechanics/iswin.c
     src/lib/beep.c
     src/lib/lrand.c
     src/lib/sclear.c
-    src/io/animate.c
 )
 
 add_executable(lyd ${SOURCES})

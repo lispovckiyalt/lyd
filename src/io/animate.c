@@ -25,7 +25,7 @@ animate(int color)
     }
     usleep(300000);
 
-    const char * selected_color = ccts(color);
+    const char * selected_color = get_cstr(color);
 
     printf("%s\n", selected_color);
 }

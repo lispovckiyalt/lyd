@@ -26,7 +26,7 @@ void
 print_array(char * color, char * first, ...);
 
 char*
-ccts(int needtocheck);
+get_cstr(int value);
 
 void
 animate(int selectedcolor);

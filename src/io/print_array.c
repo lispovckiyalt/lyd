@@ -39,7 +39,7 @@ print_array(char * color, char * first, ...)
 
     char * currentarg = first;
 
-    while (currentarg != NULL)
+    while (currentarg != 0x0)
     {
 
         if (count >= capacity)
