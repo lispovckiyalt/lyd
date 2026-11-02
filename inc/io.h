@@ -10,8 +10,10 @@
 
 #include "player.h"
 
+struct items; 
+
 void
-controller(struct plr* sp);
+controller(struct plr* sp, struct items* Items);
 
 bool
 makebid(struct plr* sp);

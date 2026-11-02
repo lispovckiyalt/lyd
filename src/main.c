@@ -6,6 +6,7 @@
  */
 
 #include <stdbool.h>
+#include <stdlib.h>
 
 #include "player.h"     /* struct plr: player state */
 #include "rend.h"       /* screen rendering */
@@ -13,15 +14,26 @@
 #include "lib.h"        /* utilities (sclear) */
 #include "mechanics.h"  /* game rules (iswin) */
 
+
+
 /* Main loop: draw the screen, read input, handle the chosen menu item. */
 int
 main(void)
 {
-    struct plr p = { .m = 100, .i = 0, .bid = 0, .isrun = true, .color = 0, .luck = 0 };
+    struct plr p = { .m = 1000, .i = 0, .bid = 0, .isrun = true, .color = 0, .luck = 0 };
+
+    struct items *game_items = malloc(sizeof(struct items));
+
+    if (game_items != NULL) {
+        game_items->ItemLuck.name = "Luck";
+        game_items->ItemLuck.price = 100;
+        game_items->ItemLuck.value = &p.luck;
+    }
+
     while (p.isrun) {
         sclear();
         spl();
-        rend_balance(p.m);
+        rend_balance(p.m, p.luck);
         /* On a win the round is over: skip the menu and restart the frame. */
         if (iswin(&p)) {
             continue;
@@ -29,7 +41,9 @@ main(void)
 
         rend_menu();
         ginput(&p.i);
-        controller(&p);
+        controller(&p, game_items);
     }
+
+    free(game_items);
     return 0;
 }

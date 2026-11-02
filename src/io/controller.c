@@ -12,7 +12,7 @@
 #include "mechanics.h"
 
 void 
-controller(struct plr* sp)
+controller(struct plr* sp, struct items* Items)
 {
 
     switch (sp->i) {
@@ -21,7 +21,7 @@ controller(struct plr* sp)
             break;
 
 	    case 2:
-            upgrades(sp);
+            upgrades(sp, Items);
             break;
 
         case 3:

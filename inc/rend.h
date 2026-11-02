@@ -8,4 +8,4 @@
 #pragma once
 void spl(void);
 void rend_menu(void);
-void rend_balance(int money);
+void rend_balance(int money, int luck);
