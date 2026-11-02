@@ -14,7 +14,7 @@
 #include "tcolor.h"
 
 void
-print(char ** array, size_t capacity, char * color)
+print(char ** array, size_t capacity, const char * color)
 {
     for(size_t index = 0; index < capacity; index++)
     {
@@ -25,7 +25,7 @@ print(char ** array, size_t capacity, char * color)
 }
 
 void
-print_array(char * color, char * first, ...)
+print_array(const char * color, char * first, ...)
 {
     size_t count = 0;
     size_t capacity = 6;
@@ -49,6 +49,7 @@ print_array(char * color, char * first, ...)
 
             if (new_allocated_memory == 0x0)
             {
+                fprintf(stderr, "Something went wrong/n");
                 free(dynamic_array); 
                 va_end(args); 
                 return;

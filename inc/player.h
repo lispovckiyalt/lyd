@@ -13,5 +13,6 @@ struct plr {
     int i;
     int bid;
     int color;
+    int luck;
     bool isrun;
 };

@@ -5,6 +5,7 @@
  * See the LICENSE file in the project root for full license information.
  */
 
+#include <stdlib.h>
 #include <unistd.h>
 
 #include "io.h"
@@ -19,9 +20,14 @@ controller(struct plr* sp)
             roulette(sp);
             break;
 
-	    case 2: 
-	        _exit(0);
-	    
+	    case 2:
+            upgrades(sp);
+            break;
+
+        case 3:
+            _exit(EXIT_SUCCESS);
+            break;
+
         default:
             return;
     }

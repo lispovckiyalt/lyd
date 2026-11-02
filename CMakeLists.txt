@@ -23,6 +23,8 @@ set(SOURCES
 
     src/mechanics/roulette.c
     src/mechanics/iswin.c
+    src/mechanics/upgrades.c
+
     src/lib/beep.c
     src/lib/lrand.c
     src/lib/sclear.c

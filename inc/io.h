@@ -23,7 +23,7 @@ int
 get_spin_result(int rp, struct plr * sp);
 
 void
-print_array(char * color, char * first, ...);
+print_array(const char * color, char * first, ...);
 
 char*
 get_cstr(int value);

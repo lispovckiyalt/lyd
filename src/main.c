@@ -17,13 +17,11 @@
 int
 main(void)
 {
-    struct plr p = { .m = 100, .i = 0, .bid = 0, .isrun = true, .color = 0 };
-
+    struct plr p = { .m = 100, .i = 0, .bid = 0, .isrun = true, .color = 0, .luck = 0 };
     while (p.isrun) {
         sclear();
         spl();
         rend_balance(p.m);
-
         /* On a win the round is over: skip the menu and restart the frame. */
         if (iswin(&p)) {
             continue;

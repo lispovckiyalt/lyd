@@ -12,5 +12,5 @@
 void
 rend_menu(void)
 {
-    print_array(COLOR_RED, "1: Roulette\n", "2: Exit\n", 0x0); 
+    print_array(COLOR_RED, "1: Roulette\n", "2: Upgrades\n", "3: Exit\n", 0x0); 
 }

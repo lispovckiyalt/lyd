@@ -6,10 +6,16 @@
  */
 
 #pragma once
+
 #include <stdbool.h>
+
 #include "player.h"
 
-bool iswin(struct plr* sp);
+bool 
+iswin(struct plr * sp);
 
 void 
-roulette(struct plr* sp);
+roulette(struct plr * sp);
+
+void
+upgrades(struct plr * sp);
