@@ -12,7 +12,8 @@
 #include "rend.h"       /* screen rendering */
 #include "io.h"         /* input and menu controller */
 #include "lib.h"        /* utilities (sclear) */
-#include "mechanics.h"  /* game rules (iswin) */
+#include "mechanics.h" /* game rules (iswin) */
+#include "items.h"     /* shop items */
 
 
 
@@ -33,7 +34,7 @@ main(void)
     while (p.isrun) {
         sclear();
         spl();
-        rend_balance(p.m, p.luck);
+        rend_balance(p.m);
         /* On a win the round is over: skip the menu and restart the frame. */
         if (iswin(&p)) {
             continue;

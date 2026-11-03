@@ -10,20 +10,7 @@
 #include <stdbool.h>
 
 #include "player.h"
-
-struct luck
-{
-    char* name;
-    int price;
-    int* value;
-};
-
-struct items
-{
-    struct luck ItemLuck;
-    void* current_item;
-};
-
+#include "items.h"
 
 bool 
 iswin(struct plr * sp);

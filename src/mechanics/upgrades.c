@@ -6,10 +6,11 @@
  */
 
 #include <stdio.h>
+#include <unistd.h>
 
 #include "mechanics.h"
 #include "io.h"
-
+#include "items.h"
 
 void
 CheckItem(struct items * Items, int * input)
@@ -35,13 +36,15 @@ buyItem(struct items * Item, struct plr * sp)
     if (sp->m < selectedluck->price)
     {
         printf("can't afford\n");
+        sleep(1);
+
         return;
     }
 
 
-    sp->m -= selectedluck->price;
-    selectedluck->price *= 2;
-    *selectedluck->value += 100;
+    sp->m -= (int)selectedluck->price;
+    selectedluck->price *= 1.3;
+    *selectedluck->value += 10;
 }
 
 void
@@ -62,7 +65,7 @@ void
 upgrades(struct plr * sp, struct items * Items)
 {
 
-    printf("1. Item: %s Price: %d Current Value: %d\n", 
+    printf("1. Item: %s\n Price: %g\n Current Value: %d\n", 
             Items->ItemLuck.name,
             Items->ItemLuck.price,
             *Items->ItemLuck.value
