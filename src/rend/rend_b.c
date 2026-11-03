@@ -13,8 +13,8 @@
 #include "tcolor.h"
 
 void
-rend_balance(int money, int luck)
+rend_balance(int money)
 { 
     beep();
-    printf("%s Balance: %i%s Luck: %d\n", COLOR_GREEN, money, RESET_COLOR, luck);
+    printf("%s Balance: %i%s\n ", COLOR_GREEN, money, RESET_COLOR);
 }
