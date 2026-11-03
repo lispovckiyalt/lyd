@@ -23,13 +23,11 @@ main(void)
 {
     struct plr p = { .m = 1000, .i = 0, .bid = 0, .isrun = true, .color = 0, .luck = 0 };
 
-    struct items *game_items = malloc(sizeof(struct items));
+    struct items game_items = {0};
 
-    if (game_items != NULL) {
-        game_items->ItemLuck.name = "Luck";
-        game_items->ItemLuck.price = 100;
-        game_items->ItemLuck.value = &p.luck;
-    }
+    game_items.ItemLuck.name = "Luck";
+    game_items.ItemLuck.price = 100;
+    game_items.ItemLuck.value = &p.luck;
 
     while (p.isrun) {
         sclear();
@@ -42,9 +40,8 @@ main(void)
 
         rend_menu();
         ginput(&p.i);
-        controller(&p, game_items);
+        controller(&p, &game_items);
     }
 
-    free(game_items);
     return 0;
 }
