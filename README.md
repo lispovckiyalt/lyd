@@ -23,7 +23,7 @@
 Terminal casino game written in C. Play with virtual money.
 
 > [!WARNING]
-> <strong><span style="color: red;">Status: WIP.</span></strong>    Splash screen, balance display and betting work. The roulette itself is not finished yet: bets are validated and deducted from the balance, but spinning and payouts are still to come.
+> <strong><span style="color: red;">Status: WIP.</span></strong>    Splash screen, balance display and betting work. The roulette finished
 
 ## Features
 
